@@ -3,12 +3,29 @@
   "framework": null,
   "buildCommand": "",
   "redirects": [
-    { "source": "/game-dap-chuot", "destination": "/game-dap-chuot/", "permanent": true },
-    { "source": "/tim-hieu-van-vo", "destination": "/tim-hieu-van-vo/", "permanent": true }
+    {
+      "source": "/game-dap-chuot",
+      "destination": "/game-dap-chuot/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-hieu-van-vo",
+      "destination": "/tim-hieu-van-vo/",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/game-dap-chuot/:path*", "destination": "https://dap-chuot-pi.vercel.app/game-dap-chuot/:path*" },
-    { "source": "/design/:path*", "destination": "https://dap-chuot-pi.vercel.app/design/:path*" },
-    { "source": "/tim-hieu-van-vo/:path*", "destination": "https://van-vo.vercel.app/:path*" }
+    {
+      "source": "/game-dap-chuot/(.*)",
+      "destination": "https://dap-chuot-pi.vercel.app/game-dap-chuot/$1"
+    },
+    {
+      "source": "/design/(.*)",
+      "destination": "https://dap-chuot-pi.vercel.app/design/$1"
+    },
+    {
+      "source": "/tim-hieu-van-vo/(.*)",
+      "destination": "https://van-vo.vercel.app/$1"
+    }
   ]
 }
